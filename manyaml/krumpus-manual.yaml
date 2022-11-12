@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: krumpus-manual
+spec:
+  containers:
+  - image: jayharts1/kubia
+    name: kubia
+    ports:
+    - containerPort: 8080
+      protocol: TCP
