@@ -1,7 +1,7 @@
-apiVersion: apps/v1beta2
+apiVersion: apps/v1
 kind: DaemonSet
 metadata:
-  name: ssd-hawk
+  name: ssd-monitor
 spec:
   selector:
     matchLabels:
