@@ -10,3 +10,7 @@ Pods can reside on containers. However, containers themselves cannot be listed o
 You generally interact with this overall structure (known as a cluster) via a CLI tool known as kubectl. Probably want to set that up as an alias in your Bashrc file, because it has a long name.
 
 K8s services work at the connection level: when new connections to a service opens, random pods are selected. So, if we curl to a node, it counts as an entire connection and ends there: when we use a browser, stuff stays alive for longer than may be expected.
+
+## LoadBalancer vs. Nodeport
+
+These both exist to accept ingress traffic.

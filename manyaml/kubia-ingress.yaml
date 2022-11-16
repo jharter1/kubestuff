@@ -1,0 +1,13 @@
+apiVersion: extensions/v1
+kind: Ingress
+metadata:
+  name: kavu-ingress
+spec:
+  rules:
+  - host: kavu.hartr.net
+    http:
+      paths:
+      - path: /
+        backend:
+        serviceName: kavu-nodeport
+        serviceport: 80
