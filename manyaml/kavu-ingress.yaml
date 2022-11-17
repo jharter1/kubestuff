@@ -2,18 +2,9 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: kavu-ingress
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
-  ingressClassName: nginx-example
-  rules:
-  - host: kavu.hartr.net
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: kavu-loadbalancer
-            port:
-              number: 80
+  defaultBackend:
+    service:
+      name: test
+      port:
+        number: 80
