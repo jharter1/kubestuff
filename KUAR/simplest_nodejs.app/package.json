@@ -1,0 +1,13 @@
+{
+    "name": "simple_nack",
+    "version": "1.0.0",
+    "description": "simply beyond it. k8sUAR app.",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "author": "",
+    "dependencies": {
+        "express": "^4.18.2"
+    }
+}
