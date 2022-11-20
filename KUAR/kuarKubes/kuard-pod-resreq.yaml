@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: kavu-pod-reslim
+  name: kavu-pod-resreq
 spec:
   containers:
     - image: gcr.io/kuar-demo/kuard-amd64:blue
@@ -10,6 +10,9 @@ spec:
         requests:
           cpu: "500m"
           memory: "128Mi"
+        limits:
+          cpu: "1000m"
+          memory: "256Mi"
       ports:
         - containerPort: 8080
           name: http
