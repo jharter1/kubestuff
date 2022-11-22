@@ -1,3 +1,5 @@
+#since this has resource requests but no limits, it probably should not be used.
+
 apiVersion: v1
 kind: Pod
 metadata:
