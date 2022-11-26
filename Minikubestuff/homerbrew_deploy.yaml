@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jacks-deployment
+  labels:
+    app: jacks
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: jacks
+  template:
+    metadata:
+      labels:
+        app: jacks
+    spec:
+      containers:
+      - name: jacks
+        image: jayharts1/kubia
+        resources:
+          requests:
+            cpu: "500m"
+            memory: "128Mi"
+          limits:
+            cpu: "1000m"
+            memory: "256Mi"
+        ports:
+        - containerPort: 8080
